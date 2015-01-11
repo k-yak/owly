@@ -1,7 +1,7 @@
 Owly project!
 ===================
 
-**Install raspberry system**
+**Install raspberry system (sdcard min 8GB)**
 
 download link : http://downloads.raspberrypi.org/raspbian_latest
 
