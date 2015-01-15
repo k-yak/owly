@@ -744,3 +744,8 @@ nav {
 #bottom #content a:hover {
   text-decoration: underline;
 }
+
+#owl-block {
+	width: 40%;
+	margin: auto;
+}
