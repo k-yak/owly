@@ -749,3 +749,45 @@ nav {
 	width: 40%;
 	margin: auto;
 }
+
+.bubble 
+{
+	position: relative;
+	width: 335px;
+	height: 140px;
+	padding: 3px;
+	background: #FFFFFF;
+	-webkit-border-radius: 33px;
+	-moz-border-radius: 33px;
+	border-radius: 33px;
+	border: #7F7F7F solid 2px;
+	padding: 20px;
+}
+
+.bubble:after 
+{
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 18px 37px 18px 0;
+	border-color: transparent #FFFFFF;
+	display: block;
+	width: 0;
+	z-index: 1;
+	left: -37px;
+	top: 74px;
+}
+
+.bubble:before 
+{
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 19px 38px 19px 0;
+	border-color: transparent #7F7F7F;
+	display: block;
+	width: 0;
+	z-index: 0;
+	left: -40px;
+	top: 73px;
+}
