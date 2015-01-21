@@ -183,9 +183,19 @@
 		
 		reposition();
 		
-		$("area").click(function(){
+		$('html').click(function() {
+			//Hide the speech bubble
+			$( ".bubble" ).hide();
+		});
+		
+		$('textarea.speech-box').click(function(event){
+			event.stopPropagation();
+		});
+		
+		$("#image-head").click(function(event){
 			reposition();
 			$( ".bubble" ).show();
+			event.stopPropagation();
 		});
 		
 		$( window ).resize( reposition );
