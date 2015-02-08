@@ -3,31 +3,27 @@
 	{
 		"selected_items":
 		[
+			[
+				"isS",
+				"isServer	(?)"
+			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "owly/owly.html",
+			"file": "owly/client/applications.js",
 			"settings":
 			{
-				"buffer_size": 304,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "owly/owly.js",
+			"file": "owly/client/index.html",
 			"settings":
 			{
-				"buffer_size": 214,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "owly/owly.css",
-			"settings":
-			{
-				"buffer_size": 1717,
+				"buffer_size": 6247,
 				"line_ending": "Unix"
 			}
 		}
@@ -35,9 +31,21 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 75.0,
+		"height": 159.0,
 		"selected_items":
 		[
+			[
+				"glue",
+				"Glue - Launch"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
 			[
 				"install",
 				"Package Control: Install Package"
@@ -55,7 +63,7 @@
 				"Package Control: Advanced Install Package"
 			]
 		],
-		"width": 575.0
+		"width": 494.0
 	},
 	"console":
 	{
@@ -72,11 +80,15 @@
 	},
 	"file_history":
 	[
+		"/home/florian/.config/sublime-text-2/Packages/User/Glue.sublime-settings",
+		"/home/florian/projects/owly/owly_project/owly/owly.css",
+		"/home/florian/projects/owly/owly_project/owly/owly.js",
+		"/home/florian/projects/owly/owly_project/owly/owly.html",
 		"/home/florian/projects/owly/owly_project/owly.sublime-project"
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -98,7 +110,7 @@
 		"replace_history":
 		[
 		],
-		"reverse": false,
+		"reverse": true,
 		"show_context": true,
 		"use_buffer2": true,
 		"whole_word": false,
@@ -112,25 +124,23 @@
 			[
 				{
 					"buffer": 0,
-					"file": "owly/owly.html",
+					"file": "owly/client/applications.js",
 					"settings":
 					{
-						"buffer_size": 304,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								304,
-								304
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -140,54 +150,26 @@
 				},
 				{
 					"buffer": 1,
-					"file": "owly/owly.js",
+					"file": "owly/client/index.html",
 					"settings":
 					{
-						"buffer_size": 214,
+						"buffer_size": 6247,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								214,
-								214
+								200,
+								200
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "owly/owly.css",
-					"settings":
-					{
-						"buffer_size": 1717,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1717,
-								1717
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1675.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -197,7 +179,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 34.0
 	},
 	"input":
 	{

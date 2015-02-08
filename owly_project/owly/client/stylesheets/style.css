@@ -725,6 +725,7 @@ nav {
   -webkit-transition: none;
   -o-transition: color 0 ease-in;
   transition: none;
+  cursor: pointer;
 }
 #bottom #widget-trigger-holder #widget-trigger.tab-closed {
   background-position: 0px -36px;
