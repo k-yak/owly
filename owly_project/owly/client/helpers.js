@@ -1,3 +1,5 @@
+var _deps = new Deps.Dependency;
+
 Template.speechBox.events({
   "keypress .speech-box": function (event, template) {
     if(event.which == 13) {
@@ -13,11 +15,26 @@ Template.speechBox.events({
 });
 
 Template.indexPage.helpers({
-    homeTitle: Meteor.i18n[Meteor.clientConfig.text_language].home.toUpperCase(),
-    createYoursTitle: Meteor.i18n[Meteor.clientConfig.text_language].createYours.toUpperCase(),
-    sourcesTitle: Meteor.i18n[Meteor.clientConfig.text_language].sources.toUpperCase(),
-    contactTitle: Meteor.i18n[Meteor.clientConfig.text_language].contact.toUpperCase(),
-    slogan: Meteor.utils.capitaliseFirst(Meteor.i18n[Meteor.clientConfig.text_language].slogan),
+    homeTitle: function(){
+        _deps.depend();
+        return Meteor.i18n[Meteor.clientConfig.text_language].home.toUpperCase()
+    },
+    createYoursTitle: function(){
+        _deps.depend();
+        return Meteor.i18n[Meteor.clientConfig.text_language].createYours.toUpperCase()
+    },
+    sourcesTitle: function(){
+        _deps.depend();
+        return Meteor.i18n[Meteor.clientConfig.text_language].sources.toUpperCase()
+    },
+    contactTitle: function(){
+        _deps.depend();
+        return Meteor.i18n[Meteor.clientConfig.text_language].contact.toUpperCase()
+    },
+    slogan: function(){
+        _deps.depend();
+        Meteor.utils.capitaliseFirst(Meteor.i18n[Meteor.clientConfig.text_language].slogan)
+    },
 });
 
 Template.speechBox.helpers({
@@ -25,17 +42,69 @@ Template.speechBox.helpers({
 }); 
 
 Template.footer.helpers({
-    githubFork: Meteor.utils.capitaliseFirst(Meteor.i18n[Meteor.clientConfig.text_language].githubFork),
-    owlyProject: Meteor.utils.capitaliseFirst(Meteor.i18n[Meteor.clientConfig.text_language].owlyProject),
-    sourceCode: Meteor.i18n[Meteor.clientConfig.text_language].sourceCode,
-    createdBy: Meteor.utils.capitaliseFirst(Meteor.i18n[Meteor.clientConfig.text_language].createdBy),
-    author: Meteor.i18n[Meteor.clientConfig.text_language].author,
-    news: Meteor.i18n[Meteor.clientConfig.text_language].news.toUpperCase(),
-    todo: Meteor.i18n[Meteor.clientConfig.text_language].todo.toUpperCase(),
-    about: Meteor.i18n[Meteor.clientConfig.text_language].about.toUpperCase(),
-    why: Meteor.i18n[Meteor.clientConfig.text_language].why.toUpperCase(),
-    lastNews: Meteor.i18n[Meteor.clientConfig.text_language].newsList,
-    lastTodos: Meteor.i18n[Meteor.clientConfig.text_language].todoList,
-    aboutText: Meteor.i18n[Meteor.clientConfig.text_language].aboutText,
-    whyText: Meteor.i18n[Meteor.clientConfig.text_language].whyText,
-}); 
+    githubFork: function(){
+        _deps.depend();
+        return Meteor.utils.capitaliseFirst(Meteor.i18n[Meteor.clientConfig.text_language].githubFork);
+    },
+    owlyProject: function(){
+        _deps.depend();
+        return Meteor.utils.capitaliseFirst(Meteor.i18n[Meteor.clientConfig.text_language].owlyProject)
+    },
+    sourceCode: function(){
+        _deps.depend();
+        return Meteor.i18n[Meteor.clientConfig.text_language].sourceCode
+    },
+    createdBy: function(){
+        _deps.depend();
+        return Meteor.utils.capitaliseFirst(Meteor.i18n[Meteor.clientConfig.text_language].createdBy)
+    },
+    author: function(){
+        _deps.depend();
+        return Meteor.i18n[Meteor.clientConfig.text_language].author
+    },
+    news: function(){
+        _deps.depend();
+        return Meteor.i18n[Meteor.clientConfig.text_language].news.toUpperCase()
+    },
+    todo: function(){
+        _deps.depend();
+        return Meteor.i18n[Meteor.clientConfig.text_language].todo.toUpperCase()
+    },
+    about: function(){
+        _deps.depend();
+        return Meteor.i18n[Meteor.clientConfig.text_language].about.toUpperCase()
+    },
+    why: function(){
+        _deps.depend();
+        return Meteor.i18n[Meteor.clientConfig.text_language].why.toUpperCase()
+    },
+    lastNews: function(){
+        _deps.depend();
+        return Meteor.i18n[Meteor.clientConfig.text_language].newsList
+    },
+    lastTodos: function(){
+        _deps.depend();
+        return Meteor.i18n[Meteor.clientConfig.text_language].todoList
+    },
+    aboutText: function(){
+        _deps.depend();
+        return Meteor.i18n[Meteor.clientConfig.text_language].aboutText
+    },
+    whyText: function(){
+        _deps.depend();
+        return Meteor.i18n[Meteor.clientConfig.text_language].whyText
+    },
+});
+
+Template.headerIconBar.events({
+    "click .french": function (event, template) {
+        Meteor.clientConfig.text_language = "fr";
+        Meteor.generalConfig.audio_language = "fr-fr";
+        _deps.changed();
+    },
+    "click .english": function (event, template) {
+        Meteor.clientConfig.text_language = "en";
+        Meteor.generalConfig.audio_language = "en-us";
+        _deps.changed();
+    },
+});

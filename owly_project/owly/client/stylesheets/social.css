@@ -1,6 +1,6 @@
 /* Vars ----------------------------------------------------*//* Mixins ----------------------------------------------------*/#social-bar-holder {
   float: left;
-  width: 100%;
+  width: 80%;
   position: relative;
   background: url(../img/transparent-dark.png);
   border-bottom: 1px solid #f4f3ea;
@@ -12,7 +12,7 @@
   clear: left;
   float: right;
   position: relative;
-  right: 50%;
+  right: 38%;
   text-align: center;
 }
 #social-bar li {

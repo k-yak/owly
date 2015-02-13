@@ -56,20 +56,8 @@
 <template name="indexPage">
 	<!-- WRAPPER -->
 	<div class="wrapper cf">
-
 		<header class="cf">
-
-			<!-- social-bar -->
-			<div id="social-bar-holder">
-				<ul id="social-bar" class="cf">
-
-					<li class="facebook"><a href="http://www.facebook.com"  title="Facebook" ></a></li>
-					<li class="googleplus"><a href="https://plus.google.com"  title="googleplus" ></a></li>
-					<li class="twitter"><a href="https://twitter.com"  title="twitter" ></a></li>
-				</ul>
-			</div>
-			<div class="cf"></div>
-			<!-- ENDS social-bar -->
+            {{> headerIconBar}}
 
 			<div id="logo" class="cf">
 				<a href="index.html" ><img src="img/logo.png" alt="" /></a>
@@ -198,4 +186,24 @@
 		<!-- ENDS bottom -->
 
 	</footer>
+</template>
+
+
+<template name="headerIconBar">
+    <!-- social-bar -->
+    <div id="social-bar-holder">
+        <ul id="social-bar" class="cf">
+            <li class="facebook"><a href="http://www.facebook.com"  title="Facebook" ></a></li>
+            <li class="googleplus"><a href="https://plus.google.com"  title="googleplus" ></a></li>
+            <li class="twitter"><a href="https://twitter.com"  title="twitter" ></a></li>
+        </ul>
+    </div>
+    <div id="language-bar-holder">
+        <ul id="language-bar" class="cf">
+            <li class="french"><a></a></li>
+            <li class="english"><a></a></li>
+        </ul>
+    </div>
+    <div class="cf"></div>
+    <!-- ENDS social-bar -->
 </template>

@@ -1,0 +1,53 @@
+#language-bar-holder {
+  float: right;
+  width: 20%;
+  position: relative;
+  background: url(../img/transparent-dark.png);
+  border-bottom: 1px solid #f4f3ea;
+  padding-top: 14px;
+  padding-bottom: 9px;
+}
+#language-bar {
+  display: block;
+  clear: left;
+  float: right;
+  position: relative;
+  right: 50%;
+  text-align: center;
+}
+#language-bar li {
+  display: block;
+  float: left;
+  left: 50%;
+  position: relative;
+  overflow: hidden;
+  width: 32px;
+  height: 32px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  -moz-border-radius: 40px 40px 40px 40px;
+  -webkit-border-radius: 40px 40px 40px 40px;
+  border-radius: 40px 40px 40px 40px;
+}
+#language-bar li a {
+  position: absolute;
+  height: 64px;
+  width: 32px;
+  top: 0;
+  left: 0px;
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+#language-bar li a:hover {
+  top: -32px;
+}
+#language-bar .french a {
+  background-image: url('../img/flags/french.png');
+}
+#language-bar .english a {
+  background-image: url('../img/flags/english.png');
+}
