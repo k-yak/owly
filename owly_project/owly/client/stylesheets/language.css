@@ -45,6 +45,24 @@
 #language-bar li a:hover {
   top: -32px;
 }
+
+#language-bar li.selected a {
+    position: absolute;
+    height: 64px;
+    width: 32px;
+    top: 0;
+    left: 0px;
+    background-repeat: no-repeat;
+    -webkit-transition: all 0.15s ease;
+    -moz-transition: all 0.15s ease;
+    -o-transition: all 0.15s ease;
+    transition: all 0.15s ease;
+    top: -32px;
+}
+#language-bar li.selected a:hover {
+    top: -32px;
+}
+
 #language-bar .french a {
   background-image: url('../img/flags/french.png');
 }

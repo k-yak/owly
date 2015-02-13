@@ -7,7 +7,10 @@ Template.speechBox.events({
 
         //your message will be send
         if(confirm(Meteor.i18n[Meteor.clientConfig.text_language].confirm_send)) {
+            //client one
             Meteor.owly.speech(template.firstNode.getElementsByTagName('textarea')[0].value);
+            //server one
+            Meteor.call('speech', template.firstNode.getElementsByTagName('textarea')[0].value);
             template.firstNode.getElementsByTagName('textarea')[0].value = '';
         }
     }
@@ -106,5 +109,16 @@ Template.headerIconBar.events({
         Meteor.clientConfig.text_language = "en";
         Meteor.generalConfig.audio_language = "en-us";
         _deps.changed();
+    }
+});
+
+Template.headerIconBar.helpers({
+    isFrench: function(){
+        _deps.depend();
+        return (Meteor.clientConfig.text_language == 'fr');  
     },
+    isEnglish: function(){
+        _deps.depend();
+        return (Meteor.clientConfig.text_language == 'en');  
+    }
 });
