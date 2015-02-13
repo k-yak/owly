@@ -1,6 +1,7 @@
 //configuration of any client side packages
 Meteor.clientConfig = {
-	text_language : "fr"
+	text_language: "fr",
+    localSound: false
 }
 
 Meteor.utils = { 

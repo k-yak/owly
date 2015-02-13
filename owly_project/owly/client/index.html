@@ -190,7 +190,11 @@
 
 
 <template name="headerIconBar">
-    <!-- social-bar -->
+    <div id="tool-bar-holder">
+        <ul id="tool-bar" class="cf">
+            <li class="local-sound {{#if localSoundEnable}}selected {{/if}}"><a></a></li>
+        </ul>
+    </div>
     <div id="social-bar-holder">
         <ul id="social-bar" class="cf">
             <li class="facebook"><a href="http://www.facebook.com"  title="Facebook" ></a></li>
